@@ -1,0 +1,19 @@
+button {
+    color: aqua;
+}
+
+footer {
+    margin: 10px;
+}
+
+.fieldset_enviar {
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: 0px;
+}
+
+h3 {
+    margin-bottom: 5px;
+}
