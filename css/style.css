@@ -1,5 +1,9 @@
-button {
-    color: aqua;
+.button_crear {
+    background-color: blue;
+}
+
+.button_borrar {
+    background-color: red;
 }
 
 footer {

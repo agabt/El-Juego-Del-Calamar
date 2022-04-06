@@ -39,7 +39,7 @@
             </div>
             <div>
                 <fieldset class="fieldset_enviar">
-                    <button type="submit">Enviar</button>
+                    <button type="submit" class="button_borrar">Borrar</button>
                 </fieldset>
             </div>
         </form>
