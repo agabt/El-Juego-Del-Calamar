@@ -7,7 +7,7 @@
     <? include "includes/header.php" ?>
 
     <section>
-        <h1>Insertar un nou client</h1>
+        <h1>Insertar un nou client CANVI</h1>
     </section>
     <section>
         <form>
