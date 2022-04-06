@@ -6,14 +6,11 @@
 <body>
     <? include "includes/header.php" ?>
 
-    <section>
-        <h1>Insertar un nou client Hola</h1>
-    </section>
-    <section>
+<section>
         <form>
             <div>
                 <fieldset>
-                    <h3>CLIENT 1</h3>
+                    <h3>BORRAR CLIENT</h3>
                 </fieldset>
             </div>
             <div>
@@ -45,6 +42,11 @@
                     <button type="submit">Enviar</button>
                 </fieldset>
             </div>
+        </form>
     </section>
+
+    </form>
+    </section>
+</body>
 
     <?php include "includes/footer.php" ?>
