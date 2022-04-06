@@ -50,7 +50,7 @@
         <form>
             <div>
                 <fieldset>
-                    <h3>CLIENT 2</h3>
+                    <h3>BORRAR CLIENT</h3>
                 </fieldset>
             </div>
             <div>
