@@ -2,6 +2,6 @@
     <a href="index.php"> Índex </a>
     <a href="pagina1.php"> Pàgina 1 </a>
     <a href="pagina2.php"> Pàgina 2 </a>
-    <a href="insertar un nou client.php"> Insertar un nou client </a>
-    <a href="borrar client.php"> Borrar Un Client </a>
+    <a href="insertar un nou jugador.php"> Insertar un nou jugador </a>
+    <a href="borrar jugador.php"> Borrar un jugador </a>
 </header>

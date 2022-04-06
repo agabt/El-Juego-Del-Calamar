@@ -6,13 +6,11 @@
 <body>
     <? include "includes/header.php" ?>
 
-<section>
+    <section>
+        <h3>Borrar jugador</h3>
+    </section>
+    <section>
         <form>
-            <div>
-                <fieldset>
-                    <h3>BORRAR CLIENT</h3>
-                </fieldset>
-            </div>
             <div>
                 <fieldset>
                     <h6>Nom</h6>
@@ -49,4 +47,4 @@
     </section>
 </body>
 
-    <?php include "includes/footer.php" ?>
+<?php include "includes/footer.php" ?>

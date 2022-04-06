@@ -7,13 +7,13 @@
     <? include "includes/header.php" ?>
 
     <section>
-        <h1>Insertar un nou client Hola</h1>
+        <h1>Insertar un nou jugador</h1>
     </section>
     <section>
         <form>
             <div>
                 <fieldset>
-                    <h3>CLIENT 1</h3>
+                    <h3>Jugador</h3>
                 </fieldset>
             </div>
             <div>
