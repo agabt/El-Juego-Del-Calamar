@@ -13,25 +13,28 @@
         <table border="1">
             <thead>
                 <tr>
-                    <td>DNI</td>
+                    <td>ID</td>
                     <td>Nom</td>
-                    <td>Llinatges</td>
-                    <td>Email</td>
+                    <td>Pais</td>
+                    <td>CP</td>
                 </tr>
+                <?php
+                $query = "SELECT * FROM Client";
+                $result = mysqli_query($dbh, $query);
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "<tr>
+                            <td>" . $row['ID'] . "</td>
+                            <td>" . $row['Nom'] . "</td>
+                            <td>" . $row['Pais'] . "</td>
+                            <td>" . $row['CP'] . "</td>
+                            </tr>";
+                } ?>
             </thead>
-            <tbody>
-                <tr>
-                    <td>4912654M</td>
-                    <td>Pep</td>
-                    <td>Guillem Serrà</td>
-                    <td>pguillems@prova.com</td>
-                </tr>
-            </tbody>
         </table>
     </section>
 
     <?php include "includes/footer.php" ?>
-    
+
 </body>
 
 </html>
