@@ -1,3 +1,6 @@
+<?php
+require "includes/database.php";
+?>
 <head>
     <meta charset="utf-8" />
     <title>Index</title>
