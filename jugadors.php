@@ -18,7 +18,7 @@
                     <td>CP</td>
                 </tr>
                 <?php
-                $query = "SELECT * FROM Client";
+                $query = "SELECT * FROM Jugador";
                 $result = mysqli_query($dbh, $query);
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo "<tr>
