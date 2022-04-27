@@ -3,7 +3,7 @@ require "includes/database.php";
 ?>
 <head>
     <meta charset="utf-8" />
-    <title>Index</title>
+    <title>El Juego Del Calamar</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
     <meta content="" name="descripcio" />
     <meta content="" name="autor" />
