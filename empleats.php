@@ -6,7 +6,7 @@
 <body>
     <?php include "includes/header.php" ?>
     <section>
-        <h1>Pàgina 1 CANVI</h1>
+        <h1>Empleats</h1>
     </section>
     <?php include "includes/footer.php" ?>
 </body>
