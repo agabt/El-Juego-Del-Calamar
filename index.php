@@ -8,6 +8,10 @@
 
     <section>
         <h1>Índex</h1>
+        <h3>
+            Fancy display heading
+            <small class="text-muted">With faded secondary text</small>
+        </h3>
     </section>
     
 
