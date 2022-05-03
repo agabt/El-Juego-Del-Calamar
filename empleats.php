@@ -7,9 +7,6 @@
     <?php include "includes/header.php" ?>
     <section>
         <h1>Empleats</h1>
-    </section>
-    <?php include "includes/footer.php" ?>
-    <section>
         <table border="1">
             <thead>
                 <tr>
@@ -32,6 +29,9 @@
             </thead>
         </table>
     </section>
+    </section>
+    <?php include "includes/footer.php" ?>
+    <section>
 </body>
 
 </html>
