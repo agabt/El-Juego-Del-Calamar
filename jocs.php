@@ -8,7 +8,6 @@
     <section>
         <h1>Joc</h1>
     </section>
-    <?php include "includes/footer.php" ?>
     <section>
         <table border="1">
             <thead>
@@ -30,6 +29,7 @@
             </thead>
         </table>
     </section>
+    <?php include "includes/footer.php" ?>
 </body>
 
 </html>
