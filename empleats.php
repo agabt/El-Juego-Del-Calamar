@@ -7,7 +7,7 @@
     <?php include "includes/header.php" ?>
     <section>
         <h1>Empleats</h1>
-        <table border="1">
+        <table class="table">
             <thead>
                 <tr>
                     <td>ID</td>
