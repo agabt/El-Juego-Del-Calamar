@@ -9,7 +9,7 @@
         <h1>Jugadors</h1>
     </section>
     <section>
-        <table border="1">
+        <table class="table">
             <thead>
                 <tr>
                     <td>ID</td>
