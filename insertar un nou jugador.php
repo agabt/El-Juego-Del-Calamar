@@ -10,7 +10,7 @@
         <h1>Insertar un nou jugador</h1>
     </section>
     <section>
-        <form>
+        <form action="scripts/nou_client.php" method="POST">
             <div>
                 <fieldset>
                     <h3>Jugador</h3>
@@ -19,25 +19,19 @@
             <div>
                 <fieldset>
                     <h6>Nom</h6>
-                    <input type="text" maxlength="50" placeholder="Nom" required />
+                    <input type="text" name="Nom" maxlength="100" placeholder="Nom" required />
                 </fieldset>
             </div>
             <div>
                 <fieldset>
-                    <h6>Email</h6>
-                    <input type="email" placeholder="Email" required />
+                    <h6>Pais</h6>
+                    <input type="text" name="Pais" maxlength="2" placeholder="Pais" required />
                 </fieldset>
             </div>
             <div>
                 <fieldset>
-                    <h6>Data de naixament</h6>
-                    <input type="date" required />
-                </fieldset>
-            </div>
-            <div>
-                <fieldset>
-                    <h6>Número</h6>
-                    <input type="number" min="4000" max="99999999" placeholder="Número" />
+                    <h6>CP</h6>
+                    <input type="text" name="CP" required />
                 </fieldset>
             </div>
             <div>
