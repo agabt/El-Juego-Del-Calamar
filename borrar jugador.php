@@ -7,32 +7,14 @@
     <? include "includes/header.php" ?>
 
     <section>
-        <h3>Borrar jugador</h3>
+        <h2>Borrar jugador</h2>
     </section>
     <section>
-        <form>
+        <form action="scripts/borrar_jugador.php" method="POST">
             <div>
                 <fieldset>
-                    <h6>Nom</h6>
-                    <input type="text" maxlength="50" placeholder="Nom" required />
-                </fieldset>
-            </div>
-            <div>
-                <fieldset>
-                    <h6>Email</h6>
-                    <input type="email" placeholder="Email" required />
-                </fieldset>
-            </div>
-            <div>
-                <fieldset>
-                    <h6>Data de naixament</h6>
-                    <input type="date" required />
-                </fieldset>
-            </div>
-            <div>
-                <fieldset>
-                    <h6>Número</h6>
-                    <input type="number" min="4000" max="99999999" placeholder="Número" />
+                    <h6>ID</h6>
+                    <input type="number" name="ID" minlength="0" maxlength="9999999999" placeholder="ID" required />
                 </fieldset>
             </div>
             <div>
@@ -40,10 +22,13 @@
                     <button type="submit" class="button_borrar">Borrar</button>
                 </fieldset>
             </div>
+            <div>
+                <fieldset>
+                    <h6>Jugador que eliminaras</h6>
+                    <label><?  ?></label>
+                </fieldset>
+            </div>
         </form>
-    </section>
-
-    </form>
     </section>
 </body>
 

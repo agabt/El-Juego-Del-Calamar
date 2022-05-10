@@ -2,13 +2,9 @@
 
 include "../includes/database.php";
 
-$nom = $_POST["Nom"];
-$pais = $_POST["Pais"];
-$cp = $_POST["CP"];
+$id = $_POST["ID"];
 
-$query = "INSERT INTO Jugador (Nom,Pais,CP) VALUES('$nom','$pais','$cp')";
-
-mysqli_query($dbh, $query);
+$query = "DELETE FROM Jugador WHERE ID='$id'";
 
 $result = mysqli_query($dbh, $query);
 
