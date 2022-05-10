@@ -7,15 +7,10 @@
     <? include "includes/header.php" ?>
 
     <section>
-        <h1>Insertar un nou jugador</h1>
+        <h2>Insertar un nou jugador</h2>
     </section>
     <section>
-        <form action="scripts/nou_client.php" method="POST">
-            <div>
-                <fieldset>
-                    <h3>Jugador</h3>
-                </fieldset>
-            </div>
+        <form action="scripts/nou_jugador.php" method="POST">
             <div>
                 <fieldset>
                     <h6>Nom</h6>
@@ -31,7 +26,7 @@
             <div>
                 <fieldset>
                     <h6>CP</h6>
-                    <input type="text" name="CP" required />
+                    <input type="text" name="CP" placeholder="Codi Postal" required />
                 </fieldset>
             </div>
             <div>
@@ -39,6 +34,7 @@
                     <button type="submit" class="button_crear">Enviar</button>
                 </fieldset>
             </div>
+        </form>
     </section>
-
-    <?php include "includes/footer.php" ?>
+</body>
+<?php include "includes/footer.php" ?>
