@@ -3,8 +3,39 @@
 
 <?php include "includes/head.php" ?>
 
+<?php
+$client = null;
+if (isset($_GET['ID'])) {
+    $id_client = $_GET['ID'];
+    $query = "SELECT * FROM clients WHERE id = '$id_client' ";
+    $result = mysqli_query($dbh, $query) or die(mysqli_error($dbh));
+    $client = mysqli_fetch_assoc($result);
+}
+
+$action = 'scripts/insert-client.php';
+if ($client != null) {
+    $action = 'scripts/update-client.php';
+}
+?>
+
 <body>
     <? include "includes/header.php" ?>
+
+    <section class="mb-5 mt-5">
+        <?php
+        include 'includes/header.html';
+        ?>
+        <h1 class="mb-5 mt-5">
+            <?php
+            if ($client == null) {
+                echo 'NOU CLIENT';
+            } else {
+                echo 'EDITA EL CLIENT';
+            }
+            ?>
+        </h1>
+
+    </section>
 
     <section>
         <h2>Insertar un nou jugador</h2>
