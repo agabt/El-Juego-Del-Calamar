@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ERROR | E_PARSE);
-require "includes/database.php";
+require "database.php";
 ?>
 
 <head>
