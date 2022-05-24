@@ -4,12 +4,12 @@ include "../includes/database.php";
 
 $id = $_GET["ID"];
 
-$query = "DELETE FROM Empleat WHERE ID='$id'";
+$query = "DELETE FROM Temporada WHERE ID='$id'";
 
 $result = mysqli_query($dbh, $query);
 
 if($result) {
-    header('Location: ../empleats.php');
+    header('Location: ../temporades.php');
 }else{
     echo mysqli_error($dbh);
 }

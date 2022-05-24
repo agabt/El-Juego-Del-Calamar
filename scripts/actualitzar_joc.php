@@ -5,14 +5,13 @@ include "../includes/database.php";
 $id = $_POST["ID"];
 $nom = $_POST["Nom"];
 $pais = $_POST["Pais"];
-$cp = $_POST["CP"];
 
-$query = "UPDATE Empleat SET Nom = '$nom', Pais = '$pais', CP = '$cp' WHERE ID = '$id'";
+$query = "UPDATE Joc SET Nom = '$nom', Pais = '$pais' WHERE ID = '$id'";
 
 $result = mysqli_query($dbh, $query);
 
 if($result) {
-    header('Location: ../empleats.php');
+    header('Location: ../jocs.php');
 }else{
     echo mysqli_error($dbh);
 }
