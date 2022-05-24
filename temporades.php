@@ -9,6 +9,9 @@
         <h1>Temporades</h1>
     </section>
     <section>
+    <a class="btn btn-primary" href="insertar nous/insertar una nova temporada.php">INSERTAR NOVA TEMPORADA</a>
+    </section>
+    <section>
         <table class="table">
             <thead>
                 <tr>
@@ -22,6 +25,10 @@
                     echo "<tr>
                             <td>" . $row['ID'] . "</td>
                             <td>" . $row['Any'] . "</td>
+                            <td>
+                            <a class='btn btn-primary' href='insertar nous/insertar una nova temporada.php?ID=" . $row['ID'] . "'><i class='bi bi-pencil-fill'></i></a>
+                            <a class='btn btn-danger' href='scripts/borrar_temporada.php?ID=" . $row['ID'] . "'><i class='bi bi-trash3-fill'></i></a>
+                            </td>
                             </tr>";
                 } ?>
             </thead>
