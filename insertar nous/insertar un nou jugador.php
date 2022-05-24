@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 
-<?php include "includes/head.php" ?>
+<?php include "../includes/head.php" ?>
 
 <body>
-    <? include "includes/header.php" ?>
+    <? include "../includes/header.php" ?>
 
     <?php
     $client = null;
@@ -15,9 +15,9 @@
         $client = mysqli_fetch_assoc($result);
     }
 
-    $action = 'scripts/nou_jugador.php';
+    $action = '../scripts/nou_jugador.php';
     if ($client != null) {
-        $action = 'scripts/actualitzar_jugador.php';
+        $action = '../scripts/actualitzar_jugador.php';
     }
     ?>
 
@@ -69,4 +69,6 @@
         </form>
     </section>
 </body>
-<?php include "includes/footer.php" ?>
+<?php include "../includes/footer.php" ?>
+
+</html>
