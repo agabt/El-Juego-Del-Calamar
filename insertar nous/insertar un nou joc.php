@@ -38,15 +38,17 @@
             <div class="form-group">
                 <fieldset>
                     <h6>Nom</h6>
-                    <input type="text" name="Nom" maxlength="100" placeholder="Nom" required />
-                    <small id="emailHelp" class="form-text text-muted">No compartirem l'email amb ningú.</small>
+                    <input value="<?= $joc['Nom']; ?>" type="text" name="Nom" maxlength="100" placeholder="Nom" required />
                 </fieldset>
             </div>
             <div class="form-group">
                 <fieldset>
                     <h6>Pais</h6>
-                    <input type="text" name="Pais" maxlength="2" placeholder="Pais" required />
+                    <input value="<?= $joc['Pais']; ?>" type="text" name="Pais" maxlength="2" placeholder="Pais" required />
                 </fieldset>
+            </div>
+            <div>
+                <small id="emailHelp" class="form-text text-muted">No compartirem les dades amb ningú.</small>
             </div>
             <div class="form-group">
                 <fieldset class="fieldset_enviar">

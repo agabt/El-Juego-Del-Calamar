@@ -38,8 +38,11 @@
             <div class="form-group">
                 <fieldset>
                     <h6>Any</h6>
-                    <input type="date" name="Any" maxlength="100" placeholder="Any" required />
+                    <input value="<?= $temporada['Any']; ?>" type="date" name="Any" maxlength="100" placeholder="Any" required />
                 </fieldset>
+            </div>
+            <div>
+                <small id="emailHelp" class="form-text text-muted">No compartirem les dades amb ningú.</small>
             </div>
             <div class="form-group">
                 <fieldset class="fieldset_enviar">

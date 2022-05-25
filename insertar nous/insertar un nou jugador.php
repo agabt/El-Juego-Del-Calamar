@@ -7,16 +7,16 @@
     <? include "../includes/header.php" ?>
 
     <?php
-    $client = null;
+    $jugador = null;
     if (isset($_GET['ID'])) {
-        $id_client = $_GET['ID'];
-        $query = "SELECT * FROM Jugador WHERE ID = '$id_client' ";
+        $id_jugador = $_GET['ID'];
+        $query = "SELECT * FROM Jugador WHERE ID = '$id_jugador' ";
         $result = mysqli_query($dbh, $query) or die(mysqli_error($dbh));
-        $client = mysqli_fetch_assoc($result);
+        $jugador = mysqli_fetch_assoc($result);
     }
 
     $action = '../scripts/nou_jugador.php';
-    if ($client != null) {
+    if ($jugador != null) {
         $action = '../scripts/actualitzar_jugador.php';
     }
     ?>
@@ -24,7 +24,7 @@
     <section class="mb-5 mt-5">
         <h1 class="mb-5 mt-5">
             <?php
-            if ($client == null) {
+            if ($jugador == null) {
                 echo 'NOU JUGADOR';
             } else {
                 echo 'EDITA EL JUGADOR';
@@ -38,21 +38,23 @@
             <div class="form-group">
                 <fieldset>
                     <h6>Nom</h6>
-                    <input type="text" name="Nom" maxlength="100" placeholder="Nom" required />
-                    <small id="emailHelp" class="form-text text-muted">No compartirem l'email amb ningú.</small>
+                    <input value="<?= $jugador['Nom']; ?>" type="text" name="Nom" maxlength="100" placeholder="Nom" required />
                 </fieldset>
             </div>
             <div class="form-group">
                 <fieldset>
                     <h6>Pais</h6>
-                    <input type="text" name="Pais" maxlength="2" placeholder="Pais" required />
+                    <input value="<?= $jugador['Pais']; ?>" type="text" name="Pais" maxlength="2" placeholder="Pais" required />
                 </fieldset>
             </div>
             <div class="form-group">
                 <fieldset>
                     <h6>CP</h6>
-                    <input type="text" name="CP" placeholder="Codi Postal" maxlength="10" required />
+                    <input value="<?= $jugador['CP']; ?>" type="text" name="CP" placeholder="Codi Postal" maxlength="10" required />
                 </fieldset>
+            </div>
+            <div>
+                <small id="emailHelp" class="form-text text-muted">No compartirem les dades amb ningú.</small>
             </div>
             <div class="form-group">
                 <fieldset class="fieldset_enviar">
@@ -61,8 +63,8 @@
             </div>
             <div class="form-group">
                 <?php
-                if ($client) {
-                    echo "<input type='hidden' value='" . $client['ID'] . "' name='ID'>";
+                if ($jugador) {
+                    echo "<input type='hidden' value='" . $jugador['ID'] . "' name='ID'>";
                 }
                 ?>
             </div>
