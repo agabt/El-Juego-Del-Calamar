@@ -4,12 +4,13 @@
 <?php include "includes/head.php" ?>
 
 <body>
+    <div class="container">
     <?php include "includes/header.php" ?>
     <section>
         <h1>Temporades</h1>
     </section>
     <section>
-    <a class="btn btn-primary" href="insertar nous/insertar una nova temporada.php">INSERTAR NOVA TEMPORADA</a>
+    <a class="btn btn-primary mb-5" href="insertar nous/insertar una nova temporada.php">INSERTAR NOVA TEMPORADA</a>
     </section>
     <section>
         <table class="table">
@@ -35,6 +36,7 @@
         </table>
     </section>
     <?php include "includes/footer.php" ?>
+    </div>
 </body>
 
 </html>
