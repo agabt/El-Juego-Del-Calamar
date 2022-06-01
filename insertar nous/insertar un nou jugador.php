@@ -8,8 +8,8 @@
 
     <?php
     $jugador = null;
-    if (isset($_GET['ID'])) {
-        $id_jugador = $_GET['ID'];
+    if (isset($_GET['IDJugador'])) {
+        $id_jugador = $_GET['IDJugador'];
         $query = "SELECT * FROM Jugador WHERE ID = '$id_jugador' ";
         $result = mysqli_query($dbh, $query) or die(mysqli_error($dbh));
         $jugador = mysqli_fetch_assoc($result);
@@ -54,6 +54,19 @@
                 </fieldset>
             </div>
             <div>
+                <fieldset>
+                    <h6>Temporada participada</h6>
+                    <select>
+                        <?
+                        $query = "SELECT Any FROM Temporada";
+                        $result = mysqli_query($dbh, $query);
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            echo "<option value=" . $row['ID'] . ">" . $row['Any'] . "</option>";
+                        } ?>
+                    </select>
+                </fieldset>
+            </div>
+            <div>
                 <small id="emailHelp" class="form-text text-muted">No compartirem les dades amb ningú.</small>
             </div>
             <div class="form-group">
@@ -64,7 +77,7 @@
             <div class="form-group">
                 <?php
                 if ($jugador) {
-                    echo "<input type='hidden' value='" . $jugador['ID'] . "' name='ID'>";
+                    echo "<input type='hidden' value='" . $jugador['IDJugador'] . "' name='IDJugador'>";
                 }
                 ?>
             </div>

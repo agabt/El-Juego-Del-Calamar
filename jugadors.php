@@ -20,17 +20,22 @@
                         <td>Nom</td>
                         <td>Pais</td>
                         <td>CP</td>
+                        <td>Temporada Participada</td>
                         <td>Opcions</td>
                     </tr>
                     <?php
-                    $query = "SELECT * FROM Jugador";
+                    $query = "SELECT Jugador.ID AS IDJugador, Jugador.Nom AS NomJugador, 
+                    Jugador.Pais AS PaisJugador, Jugador.CP AS CPJugador, Jugador.fk_temporada, 
+                    Temporada.ID, Temporada.Any AS AnyTemporada FROM Jugador 
+                    INNER JOIN Temporada ON Jugador.fk_temporada = Temporada.ID";
                     $result = mysqli_query($dbh, $query);
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>
-                            <td>" . $row['ID'] . "</td>
-                            <td>" . $row['Nom'] . "</td>
-                            <td>" . $row['Pais'] . "</td>
-                            <td>" . $row['CP'] . "</td>
+                            <td>" . $row['IDJugador'] . "</td>
+                            <td>" . $row['NomJugador'] . "</td>
+                            <td>" . $row['PaisJugador'] . "</td>
+                            <td>" . $row['CPJugador'] . "</td>
+                            <td>" . $row['AnyTemporada'] . "</td>
                             <td>
                             <a class='btn btn-primary' href='insertar nous/insertar un nou jugador.php?ID=" . $row['ID'] . "'><i class='bi bi-pencil-fill'></i></a>
                             <a class='btn btn-danger' href='scripts/borrar_jugador.php?ID=" . $row['ID'] . "'><i class='bi bi-trash3-fill'></i></a>
