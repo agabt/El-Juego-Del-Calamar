@@ -7,7 +7,7 @@ die;
 }
 
 if (!mysqli_select_db($dbh, 'el_juego_del_calamar')) {
-echo "Error db_connect: error en mysqli_select_db: _BBDD_NAME<br>";
+echo "Error db_connect: error en mysqli_select_db: el_juego_del_calamar<br>";
 die;
 }
 ?>
