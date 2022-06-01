@@ -10,7 +10,7 @@
     $jugador = null;
     if (isset($_GET['IDJugador'])) {
         $id_jugador = $_GET['IDJugador'];
-        $query = "SELECT * FROM Jugador WHERE ID = '$id_jugador' ";
+        $query = "SELECT * FROM Jugador WHERE IDJugador = '$id_jugador' ";
         $result = mysqli_query($dbh, $query) or die(mysqli_error($dbh));
         $jugador = mysqli_fetch_assoc($result);
     }
@@ -43,8 +43,20 @@
             </div>
             <div class="form-group">
                 <fieldset>
-                    <h6>Pais</h6>
-                    <input value="<?= $jugador['Pais']; ?>" type="text" name="Pais" maxlength="2" placeholder="Pais" required />
+                    <h6>Carrer</h6>
+                    <input value="<?= $jugador['Carrer']; ?>" type="text" name="Carrer" maxlength="200" placeholder="Carrer" required />
+                </fieldset>
+            </div>
+            <div class="form-group">
+                <fieldset>
+                    <h6>Ciutat</h6>
+                    <input value="<?= $jugador['Ciutat']; ?>" type="text" name="Ciutat" placeholder="Ciutat" maxlength="200" required />
+                </fieldset>
+            </div>
+            <div class="form-group">
+                <fieldset>
+                    <h6>Data de naixament</h6>
+                    <input value="<?= $jugador['Data de naixament']; ?>" type="Date" name="Data de naixament" placeholder="Data de naixament" required />
                 </fieldset>
             </div>
             <div class="form-group">
@@ -55,13 +67,13 @@
             </div>
             <div>
                 <fieldset>
-                    <h6>Temporada participada</h6>
+                    <h6>Pais d'origen</h6>
                     <select>
                         <?
-                        $query = "SELECT Any FROM Temporada";
+                        $query = "SELECT * FROM Pais";
                         $result = mysqli_query($dbh, $query);
                         while ($row = mysqli_fetch_assoc($result)) {
-                            echo "<option value=" . $row['ID'] . ">" . $row['Any'] . "</option>";
+                            echo "<option value=" . $row['IDPais'] . ">" . $row['Nom'] . "</option>";
                         } ?>
                     </select>
                 </fieldset>
