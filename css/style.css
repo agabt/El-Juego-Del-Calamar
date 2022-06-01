@@ -39,3 +39,12 @@ h1{
 .centrat {
     text-align: center;
 }
+
+footer {
+    background-color: rgb(150, 150, 200);
+    text-align: center;
+    text-decoration: black;
+    font-weight: bold;
+    margin-top: 5rem;
+    padding-bottom: 1rem;
+}
