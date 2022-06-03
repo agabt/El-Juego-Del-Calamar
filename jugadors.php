@@ -41,8 +41,8 @@
                             <td>" . $row['CPJugador'] . "</td>
                             <td>" . $row['NomPais'] . "</td>
                             <td>
-                            <a class='btn btn-primary' href='insertar nous/insertar un nou jugador.php?ID=" . $row['IDJugador'] . "'><i class='bi bi-pencil-fill'></i></a>
-                            <a class='btn btn-danger' href='scripts/borrar_jugador.php?ID=" . $row['IDJugador'] . "'><i class='bi bi-trash3-fill'></i></a>
+                            <a class='btn btn-primary' href='insertar nous/insertar un nou jugador.php?IDJugador=" . $row['IDJugador'] . "'><i class='bi bi-pencil-fill'></i></a>
+                            <a class='btn btn-danger' href='scripts/borrar_jugador.php?IDJugador=" . $row['IDJugador'] . "'><i class='bi bi-trash3-fill'></i></a>
                             </td>
                             </tr>";
                     } ?>
