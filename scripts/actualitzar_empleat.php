@@ -2,12 +2,13 @@
 
 include "../includes/database.php";
 
-$id = $_POST["ID"];
+$id = $_POST["IDEmpleat"];
 $nom = $_POST["Nom"];
-$pais = $_POST["Pais"];
-$cp = $_POST["CP"];
+$sou = $_POST["Sou"];
+$rang = $_POST["Rang"];
+$data_naixament = $_POST["Data_naixament"];
 
-$query = "UPDATE Empleat SET Nom = '$nom', Pais = '$pais', CP = '$cp' WHERE ID = '$id'";
+$query = "UPDATE Empleat SET Nom = '$nom', Sou = '$sou', Rang = '$rang', Data_naixament = '$data_naixament'WHERE IDEmpleat = '$id'";
 
 $result = mysqli_query($dbh, $query);
 

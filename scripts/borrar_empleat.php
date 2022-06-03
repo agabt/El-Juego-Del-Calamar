@@ -2,9 +2,9 @@
 
 include "../includes/database.php";
 
-$id = $_GET["ID"];
+$idempleat = $_GET["IDEmpleat"];
 
-$query = "DELETE FROM Empleat WHERE ID='$id'";
+$query = "DELETE FROM Empleat WHERE IDEmpleat='$idempleat'";
 
 $result = mysqli_query($dbh, $query);
 

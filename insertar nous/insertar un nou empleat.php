@@ -8,9 +8,9 @@
 
     <?php
     $empleat = null;
-    if (isset($_GET['ID'])) {
-        $id_empleat = $_GET['ID'];
-        $query = "SELECT * FROM Empleat WHERE ID = '$id_empleat' ";
+    if (isset($_GET['IDEmpleat'])) {
+        $id_empleat = $_GET['IDEmpleat'];
+        $query = "SELECT * FROM Empleat WHERE IDEmpleat = '$id_empleat' ";
         $result = mysqli_query($dbh, $query) or die(mysqli_error($dbh));
         $empleat = mysqli_fetch_assoc($result);
     }
@@ -43,14 +43,24 @@
             </div>
             <div class="form-group">
                 <fieldset>
-                    <h6>Pais</h6>
-                    <input value="<?= $empleat['Pais']; ?>" type="text" name="Pais" maxlength="2" placeholder="Pais" required />
+                    <h6>Sou</h6>
+                    <input value="<?= $empleat['Sou']; ?>" type="number" name="Sou" maxlength="10" placeholder="Sou" required />
                 </fieldset>
             </div>
             <div class="form-group">
                 <fieldset>
-                    <h6>CP</h6>
-                    <input value="<?= $empleat['CP']; ?>" type="text" name="CP" placeholder="Codi Postal" maxlength="10" required />
+                    <h6>Rang</h6>
+                    <select name="Rang">
+                        <option value="Cercle">Cercle</option>
+                        <option value="Triangle">Triangle</option>
+                        <option value="Cuadrat">Cuadrat</option>
+                    </select>               
+                </fieldset>
+            </div>
+            <div class="form-group">
+                <fieldset>
+                    <h6>Data naixament</h6>
+                    <input value="<?= $empleat['Data_naixament']; ?>" type="date" name="Data_naixament" placeholder="Data" maxlength="10" required />
                 </fieldset>
             </div>
             <div>
@@ -64,7 +74,7 @@
             <div class="form-group">
                 <?php
                 if ($empleat) {
-                    echo "<input type='hidden' value='" . $empleat['ID'] . "' name='ID'>";
+                    echo "<input type='hidden' value='" . $empleat['IDEmpleat'] . "' name='IDEmpleat'>";
                 }
                 ?>
             </div>

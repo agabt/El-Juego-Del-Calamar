@@ -18,8 +18,9 @@
                     <tr>
                         <td>ID</td>
                         <td>Nom</td>
-                        <td>Pais</td>
-                        <td>CP</td>
+                        <td>Sou</td>
+                        <td>Rang</td>
+                        <td>Data naixament</td>
                         <td>Opcions</td>
                     </tr>
                     <?php
@@ -27,13 +28,14 @@
                     $result = mysqli_query($dbh, $query);
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>
-                            <td>" . $row['ID'] . "</td>
+                            <td>" . $row['IDEmpleat'] . "</td>
                             <td>" . $row['Nom'] . "</td>
-                            <td>" . $row['Pais'] . "</td>
-                            <td>" . $row['CP'] . "</td>
+                            <td>" . $row['Sou'] . "</td>
+                            <td>" . $row['Rang'] . "</td>
+                            <td>" . $row['Data_naixament'] . "</td>
                             <td>
-                            <a class='btn btn-primary' href='insertar nous/insertar un nou empleat.php?ID=" . $row['ID'] . "'><i class='bi bi-pencil-fill'></i></a>
-                            <a class='btn btn-danger' href='scripts/borrar_empleat.php?ID=" . $row['ID'] . "'><i class='bi bi-trash3-fill'></i></a>
+                            <a class='btn btn-primary' href='insertar nous/insertar un nou empleat.php?IDEmpleat=" . $row['IDEmpleat'] . "'><i class='bi bi-pencil-fill'></i></a>
+                            <a class='btn btn-danger' href='scripts/borrar_empleat.php?IDEmpleat=" . $row['IDEmpleat'] . "'><i class='bi bi-trash3-fill'></i></a>
                             </td>
                             </tr>";
                     } ?>
