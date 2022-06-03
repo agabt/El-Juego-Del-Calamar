@@ -33,7 +33,7 @@
         </h1>
 
     </section>
-    <section>
+    <section class="">
         <form action="<?= $action ?>" method="POST">
             <div class="form-group">
                 <fieldset>
@@ -56,7 +56,7 @@
             <div class="form-group">
                 <fieldset>
                     <h6>Data de naixament</h6>
-                    <input value="<?= $jugador['Data de naixament']; ?>" type="Date" name="Data de naixament" placeholder="Data de naixament" required />
+                    <input value="<?= $jugador['Data_naixament']; ?>" type="Date" name="Data_naixament" placeholder="Data de naixament" required />
                 </fieldset>
             </div>
             <div class="form-group">
@@ -65,15 +65,15 @@
                     <input value="<?= $jugador['CP']; ?>" type="text" name="CP" placeholder="Codi Postal" maxlength="10" required />
                 </fieldset>
             </div>
-            <div>
+            <div class="form-group">
                 <fieldset>
                     <h6>Pais d'origen</h6>
-                    <select>
+                    <select name="Pais">
                         <?
                         $query = "SELECT * FROM Pais";
                         $result = mysqli_query($dbh, $query);
                         while ($row = mysqli_fetch_assoc($result)) {
-                            echo "<option value=" . $row['IDPais'] . ">" . $row['Nom'] . "</option>";
+                            echo "<option value=".$row['IDPais'].">" . $row['Nom'] . "</option>";
                         } ?>
                     </select>
                 </fieldset>
