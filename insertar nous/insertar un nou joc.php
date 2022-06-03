@@ -8,9 +8,9 @@
 
     <?php
     $joc = null;
-    if (isset($_GET['ID'])) {
-        $id_joc = $_GET['ID'];
-        $query = "SELECT * FROM Joc WHERE ID = '$id_joc' ";
+    if (isset($_GET['idjoc'])) {
+        $id_joc = $_GET['idjoc'];
+        $query = "SELECT * FROM joc WHERE idjoc = '$id_joc' ";
         $result = mysqli_query($dbh, $query) or die(mysqli_error($dbh));
         $joc = mysqli_fetch_assoc($result);
     }
@@ -38,13 +38,13 @@
             <div class="form-group">
                 <fieldset>
                     <h6>Nom</h6>
-                    <input value="<?= $joc['Nom']; ?>" type="text" name="Nom" maxlength="100" placeholder="Nom" required />
+                    <input value="<?= $joc['Nom']; ?>" type="text" name="Nom" maxlength="200" placeholder="Nom" required />
                 </fieldset>
             </div>
             <div class="form-group">
                 <fieldset>
-                    <h6>Pais</h6>
-                    <input value="<?= $joc['Pais']; ?>" type="text" name="Pais" maxlength="2" placeholder="Pais" required />
+                    <h6>Descripció</h6>
+                    <input value="<?= $joc['Descripcio']; ?>" type="text" name="Descripcio" maxlength="255" placeholder="Descripció" required />
                 </fieldset>
             </div>
             <div>
@@ -58,7 +58,7 @@
             <div class="form-group">
                 <?php
                 if ($joc) {
-                    echo "<input type='hidden' value='" . $joc['ID'] . "' name='ID'>";
+                    echo "<input type='hidden' value='" . $joc['idjoc'] . "' name='idjoc'>";
                 }
                 ?>
             </div>
