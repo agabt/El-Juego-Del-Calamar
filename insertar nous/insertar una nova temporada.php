@@ -8,9 +8,9 @@
 
     <?php
     $temporada = null;
-    if (isset($_GET['ID'])) {
-        $id_temporada = $_GET['ID'];
-        $query = "SELECT * FROM Temporada WHERE ID = '$id_temporada' ";
+    if (isset($_GET['IDTemporada'])) {
+        $id_temporada = $_GET['IDTemporada'];
+        $query = "SELECT * FROM Temporada WHERE IDTemporada = '$id_temporada' ";
         $result = mysqli_query($dbh, $query) or die(mysqli_error($dbh));
         $temporada = mysqli_fetch_assoc($result);
     }
@@ -37,6 +37,12 @@
         <form action="<?= $action ?>" method="POST">
             <div class="form-group">
                 <fieldset>
+                    <h6>Nom</h6>
+                    <input value="<?= $temporada['Nom']; ?>" type="text" name="Nom" maxlength="200" placeholder="Nom" required />
+                </fieldset>
+            </div>
+            <div class="form-group">
+                <fieldset>
                     <h6>Any</h6>
                     <input value="<?= $temporada['Any']; ?>" type="date" name="Any" maxlength="100" placeholder="Any" required />
                 </fieldset>
@@ -52,7 +58,7 @@
             <div class="form-group">
                 <?php
                 if ($temporada) {
-                    echo "<input type='hidden' value='" . $temporada['ID'] . "' name='ID'>";
+                    echo "<input type='hidden' value='" . $temporada['IDTemporada'] . "' name='IDTemporada'>";
                 }
                 ?>
             </div>

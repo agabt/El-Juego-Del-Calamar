@@ -18,19 +18,20 @@
                     <tr>
                         <td>ID</td>
                         <td>Nom</td>
-                        <td>Pais</td>
+                        <td>Descripció</td>
+                        <td>Opcions</td>
                     </tr>
                     <?php
-                    $query = "SELECT * FROM Joc";
+                    $query = "SELECT * FROM joc";
                     $result = mysqli_query($dbh, $query);
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>
-                            <td>" . $row['ID'] . "</td>
+                            <td>" . $row['idjoc'] . "</td>
                             <td>" . $row['Nom'] . "</td>
-                            <td>" . $row['Pais'] . "</td>
+                            <td>" . $row['Descripcio'] . "</td>
                             <td>
-                            <a class='btn btn-primary' href='insertar nous/insertar un nou joc.php?ID=" . $row['ID'] . "'><i class='bi bi-pencil-fill'></i></a>
-                            <a class='btn btn-danger' href='scripts/borrar_joc.php?ID=" . $row['ID'] . "'><i class='bi bi-trash3-fill'></i></a>
+                            <a class='btn btn-primary' href='insertar nous/insertar un nou joc.php?idjoc=" . $row['idjoc'] . "'><i class='bi bi-pencil-fill'></i></a>
+                            <a class='btn btn-danger' href='scripts/borrar_joc.php?idjoc=" . $row['idjoc'] . "'><i class='bi bi-trash3-fill'></i></a>
                             </td>
                             </tr>";
                     } ?>

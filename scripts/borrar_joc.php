@@ -2,9 +2,9 @@
 
 include "../includes/database.php";
 
-$id = $_GET["ID"];
+$id = $_GET["idjoc"];
 
-$query = "DELETE FROM Joc WHERE ID='$id'";
+$query = "DELETE FROM joc WHERE idjoc='$id'";
 
 $result = mysqli_query($dbh, $query);
 

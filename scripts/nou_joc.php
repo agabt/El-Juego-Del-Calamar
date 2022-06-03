@@ -3,9 +3,9 @@
 include "../includes/database.php";
 
 $nom = $_POST["Nom"];
-$pais = $_POST["Pais"];
+$descripcio = $_POST["Descripcio"];
 
-$query = "INSERT INTO Joc (Nom,Pais) VALUES('$nom','$pais')";
+$query = "INSERT INTO joc (Nom,Descripcio) VALUES('$nom','$descripcio')";
 
 $result = mysqli_query($dbh, $query);
 
