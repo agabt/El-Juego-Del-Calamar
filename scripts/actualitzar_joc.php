@@ -2,11 +2,11 @@
 
 include "../includes/database.php";
 
-$id = $_POST["ID"];
+$id = $_POST["idjoc"];
 $nom = $_POST["Nom"];
-$pais = $_POST["Pais"];
+$descripcio = $_POST["Descripcio"];
 
-$query = "UPDATE Joc SET Nom = '$nom', Pais = '$pais' WHERE ID = '$id'";
+$query = "UPDATE joc SET Nom = '$nom', Descripcio = '$descripcio' WHERE idjoc = '$id'";
 
 $result = mysqli_query($dbh, $query);
 

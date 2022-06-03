@@ -17,6 +17,7 @@
                 <thead>
                     <tr>
                         <td>ID</td>
+                        <td>Nom</td>
                         <td>Any</td>
                         <td>Opcions</td>
                     </tr>
@@ -25,11 +26,12 @@
                     $result = mysqli_query($dbh, $query);
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>
-                            <td>" . $row['ID'] . "</td>
+                            <td>" . $row['IDTemporada'] . "</td>
+                            <td>" . $row['Nom'] . "</td>
                             <td>" . $row['Any'] . "</td>
                             <td>
-                            <a class='btn btn-primary' href='insertar nous/insertar una nova temporada.php?ID=" . $row['ID'] . "'><i class='bi bi-pencil-fill'></i></a>
-                            <a class='btn btn-danger' href='scripts/borrar_temporada.php?ID=" . $row['ID'] . "'><i class='bi bi-trash3-fill'></i></a>
+                            <a class='btn btn-primary' href='insertar nous/insertar una nova temporada.php?IDTemporada=" . $row['IDTemporada'] . "'><i class='bi bi-pencil-fill'></i></a>
+                            <a class='btn btn-danger' href='scripts/borrar_temporada.php?IDTemporada=" . $row['IDTemporada'] . "'><i class='bi bi-trash3-fill'></i></a>
                             </td>
                             </tr>";
                     } ?>
