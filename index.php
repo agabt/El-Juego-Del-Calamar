@@ -18,6 +18,9 @@
             facil per la vista, i amigable per l'usuari.
         </h6>
     </section>
+    <section>
+        <img src="imatges/El Juego Del Calamar Logo.png" alt="El Juego Del Calamar Logo" class="logo">
+    </section>
 
     <?php include "includes/footer.php" ?>
 </body>
