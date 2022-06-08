@@ -73,7 +73,7 @@
                         $query = "SELECT * FROM Pais";
                         $result = mysqli_query($dbh, $query);
                         while ($row = mysqli_fetch_assoc($result)) {
-                            echo "<option value=".$row['IDPais'].">" . $row['Nom'] . "</option>";
+                            echo "<option value=" . $row['IDPais'] . ">" . $row['Nom'] . "</option>";
                         } ?>
                     </select>
                 </fieldset>
