@@ -55,9 +55,20 @@ section {
 }
 
 .logo {
-    width: 100%;
-    height: 100%;
+    width: 35%;
+    height: 35%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 1.5rem;
+}
+
+.div_header {
+    background-color: rgb(150, 150, 200);
+    padding: 1rem;
+}
+
+.logo_header {
+    width: 30px;
+    height: 30px;
 }
